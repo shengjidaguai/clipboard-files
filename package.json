@@ -7,33 +7,18 @@
 	"files": [
 		"lib",
 		"src",
-		"binding.gyp"	
+		"binding.gyp"
 	],
-	"binary": {
-		"module_name": "binding",
-		"module_path": "./lib/binding/{node_abi}-{platform}-{arch}/",
-		"package_name": "{node_abi}-{platform}-{arch}.tar.gz",
-		"host": "https://github.com/alex8088/clipboard-files/releases/download/",
-		"remote_path": "v{version}"
-	},
-	"keywords": [
-		"clipboard",
-		"files",
-		"electron"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/alex8088/clipboard-files.git"
-	},
 	"scripts": {
-		"test": "node ./test",
-		"install": "node-pre-gyp install --fallback-to-build"
+		"test": "node ./test"
 	},
 	"author": "alex.wei",
 	"license": "MIT",
 	"gypfile": true,
-	"dependencies": {
-		"@mapbox/node-pre-gyp": "^1.0.10",
+	"devDependencies": {
 		"nan": "^2.17.0"
+	},
+	"dependencies": {
+		"bindings": "^1.5.0"
 	}
 }

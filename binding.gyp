@@ -6,6 +6,7 @@
 			{
             "include_dirs": ["<!(node -e \"require('nan')\")"],
             "sources":[
+                "src/main.cc",
                 "src/clip_osx.h",
                 "src/clip_osx.mm"
             ],
@@ -32,6 +33,7 @@
 			{
             "include_dirs": ["<!(node -e \"require('nan')\")"],
             "sources":[
+                "src/main.cc",
                 "src/clip_win.h",
                 "src/clip_win.cc"
             ],

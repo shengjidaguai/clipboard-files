@@ -1,13 +1,10 @@
 {
 	"targets": [{
-		"target_name": "binding",
-		"sources": [
-			"src/main.cc"
-		],
-		"include_dirs": ["<!(node -e \"require('nan')\")"],
         "conditions": [
 			['OS=="mac"',
 			{
+            "target_name": "binding",
+            "include_dirs": ["<!(node -e \"require('nan')\")"],
             "sources":[
                 "src/clip_osx.h",
                 "src/clip_osx.mm"
@@ -33,6 +30,8 @@
 			],
 			['OS=="win"',
 			{
+            "target_name": "binding",
+            "include_dirs": ["<!(node -e \"require('nan')\")"],
             "sources":[
                 "src/clip_win.h",
                 "src/clip_win.cc"

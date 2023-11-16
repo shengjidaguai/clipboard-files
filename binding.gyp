@@ -1,9 +1,9 @@
 {
 	"targets": [{
+	    "target_name": "binding",
         "conditions": [
 			['OS=="mac"',
 			{
-            "target_name": "binding",
             "include_dirs": ["<!(node -e \"require('nan')\")"],
             "sources":[
                 "src/clip_osx.h",
@@ -30,7 +30,6 @@
 			],
 			['OS=="win"',
 			{
-            "target_name": "binding",
             "include_dirs": ["<!(node -e \"require('nan')\")"],
             "sources":[
                 "src/clip_win.h",
@@ -41,9 +40,6 @@
 			]
             }
 			],
-			['OS=="linux"',
-				{}
-			]
 		]
 	}]
 }
